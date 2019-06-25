@@ -1,5 +1,6 @@
-package com.test.aggre.dto.req;
+package com.t.consumer.dto;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,13 +8,14 @@ import lombok.NoArgsConstructor;
 /**
  * @Description:
  * @author: liuyang
- * @datetime: 2019/6/21 0021 16:18
+ * @datetime: 2019/6/25 0025 17:55
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserReqDto {
+public class User {
 
+    @ApiModelProperty(name = "abc",value = "abc1")
     private Integer id;
     private String name;
 

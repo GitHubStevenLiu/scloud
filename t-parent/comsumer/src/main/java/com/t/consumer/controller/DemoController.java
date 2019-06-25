@@ -1,5 +1,6 @@
 package com.t.consumer.controller;
 
+import com.t.consumer.dto.User;
 import com.t.consumer.remote.AggreRemote;
 import com.t.consumer.remote.ProducerRemote;
 import com.test.aggre.dto.req.UserReqDto;
@@ -20,11 +21,17 @@ import org.springframework.web.bind.annotation.*;
 @Api(tags = {"消费者demo" })
 public class DemoController {
 
+
     @Autowired
     ProducerRemote producerRemote;
 
     @Value("${producer.service.host}")
     String host;
+    @PostMapping("/demo4")
+    public String demo4(@RequestBody User s) {
+        System.out.println(s.getId());
+        return "";
+    }
 
     @GetMapping("/demo3")
     public String demo3() {
