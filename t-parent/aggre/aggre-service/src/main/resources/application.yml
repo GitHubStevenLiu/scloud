@@ -1,0 +1,11 @@
+server:
+  # address: 0.0.0.0
+  port: 9518
+  servlet:
+    context-path: /aggre
+    session:
+      timeout: 7200
+
+spring:
+  application:
+    name: aggre

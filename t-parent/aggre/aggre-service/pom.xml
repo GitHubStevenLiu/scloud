@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>aggre</artifactId>
+        <groupId>com.test</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>aggre-service</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <!-- api -->
+        <dependency>
+            <groupId>com.test</groupId>
+            <artifactId>aggre-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+
+                <configuration>
+                    <layout>ZIP</layout>
+
+                    <excludeGroupIds>
+                        antlr , aopalliance , ch.qos.logback , com.alibaba
+                        , com.fasterxml ,
+                        com.fasterxml.jackson.core
+                        ,
+                        com.fasterxml.jackson.dataformat,
+                        com.fasterxml.jackson.module ,
+                        com.github.jsqlparser , com.github.xiaoymin,
+                        com.github.pagehelper
+                        , com.google.code.gson
+                        , com.google.guava ,
+                        com.google.inject ,
+                        com.google.inject.extensions , com.google.zxing,
+                        ,
+                        com.google.protobuf , commons-beanutils , commons-codec ,
+                        commons-collections
+                        , commons-configuration , commons-jxpath ,
+                        commons-lang ,
+                        commons-logging
+                        , com.netflix.archaius ,
+                        com.netflix.eureka ,
+                        com.netflix.governator , com.netflix.hystrix
+                        ,
+                        com.netflix.netflix-commons , com.netflix.ribbon ,
+                        com.netflix.servo , com.sun.jersey
+                        , com.sun.jersey.contribs ,
+                        com.sun.mail , com.thoughtworks.xstream
+                        , io.github.openfeign ,
+                        io.netty
+                        , io.reactivex , io.springfox , io.swagger ,
+                        javax.activation ,
+                        javax.inject , javax.persistence
+                        , javax.servlet
+                        , javax.validation , javax.ws.rs , javax.xml.stream
+                        , joda-time ,
+                        mysql , net.bytebuddy
+                        , org.antlr , org.apache.commons ,
+                        org.apache.httpcomponents ,
+                        org.apache.tomcat ,
+                        org.apache.tomcat.embed
+                        , org.aspectj , org.bouncycastle ,
+                        org.codehaus.jettison ,
+                        org.codehaus.woodstox , org.hdrhistogram
+                        ,
+                        org.hibernate , org.javassist , org.jboss.logging , org.jvnet ,
+                        org.mapstruct , org.mybatis
+                        , org.mybatis.spring.boot , org.ow2.asm
+                        , org.reflections ,
+                        org.slf4j , org.springframework ,
+                        org.springframework.boot
+                        , org.springframework.cloud ,
+                        org.springframework.data ,
+                        org.springframework.plugin ,
+                        org.springframework.security
+                        ,org.springframework.retry
+                        , org.yaml , redis.clients , stax ,
+                        tk.mybatis , xmlpull , xpp3 ,
+                        dom4j, com.beust,
+                        com.github.jai-imageio, xml-apis, net.coobird, org.scala-lang,
+                        org.apache.poi,org.apache.xmlbeans,com.github.virtuald,
+                        org.projectlombok,
+                        com.google.code.findbugs,com.google.j2objc,org.jsoup,net.sf.json-lib,net.sf.ezmorph
+                        ,com.google.errorprone,org.codehaus.mojo,org.postgresql,
+                        io.shardingjdbc, org.codehaus.groovy
+                    </excludeGroupIds>
+
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

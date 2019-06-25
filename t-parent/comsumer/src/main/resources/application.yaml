@@ -1,0 +1,38 @@
+server:
+  port: 9515
+  servlet:
+    context-path: /consumer
+    session:
+      timeout: 7200
+
+spring:
+  application:
+    name: consumer
+# 开启Feign的熔断功能
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true # 开启请求压缩
+      mime-types: text/html,application/xml,application/json # 设置压缩的数据类型
+      min-request-size: 2048 # 设置触发压缩的大小下限
+    response:
+      enabled: true # 开启响应压缩
+
+# remote
+producer:
+  service:
+    name: producer
+    host: http://127.0.0.1:9516/${aggre.service.prefix}
+    prefix: /producer/
+    verifyCode: e25f61b7-3849-4fe2-957c-ec96adb2d97a
+
+aggre:
+  service:
+    name: aggre
+    host: http://127.0.0.1:9518${aggre.service.prefix}
+    prefix: /aggre/
+    verifyCode: e25f61b7-3849-4fe2-957c-ec96adb2d97a
+
+

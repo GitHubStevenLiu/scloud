@@ -1,0 +1,36 @@
+# config
+spring:
+  cloud:
+    config:
+      name: aggre
+      # spring.cloud.config.profile=dev
+      profile: dev
+      uri: http://scloud:scloud123@127.0.0.1:9001/
+
+# eureka
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://scloud:scloud123@127.0.0.1:9000/scloud-discovery/eureka
+
+# actuator
+info:
+  head: head
+  body: body
+management:
+  endpoints:
+    web:
+      exposure:
+        #加载所有的端点，默认只加载了info、health
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    #可以关闭指定的端点
+    shutdown:
+      enabled: false
+#  security:
+#    enabled: false
+

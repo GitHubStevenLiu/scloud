@@ -1,0 +1,29 @@
+server:
+  servlet:
+    context-path: /scloud-discovery
+  port: 9000
+spring:
+  security:
+    user:
+      name: scloud
+      password: scloud123
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      #defaultZone: http://scloud:scloud123@127.0.0.1:9000/scloud-discovery/eureka
+      defaultZone: http://127.0.0.1:9000/scloud-discovery/eureka
+  instance:
+   # hostname: localhost
+    server:
+     #enableSelfPreservation: false
+#    metadata-map:
+#      user:
+#        name: scloud
+#        password: scloud123
+
+  server:
+    enable-self-preservation: false # 自我保护
+    eviction-interval-timer-in-ms: 5000 # 每隔 多少ms 进行一次服务列表清理

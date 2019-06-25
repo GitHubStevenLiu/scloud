@@ -1,0 +1,7 @@
+t:
+  from: prod
+
+aggre:
+  service:
+    host:
+    verifyCode: e25f61b7-3849-4fe2-957c-ec96adb2d97a

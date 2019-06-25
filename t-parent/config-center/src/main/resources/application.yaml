@@ -1,0 +1,22 @@
+server:
+ # address: 0.0.0.0
+  port: 9001
+  servlet:
+#    context-path: /config-service
+    session:
+      timeout: 7200
+
+spring:
+  application:
+    name: config-service
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/properties
+  security:
+    user:
+      name: scloud
+      password: scloud123

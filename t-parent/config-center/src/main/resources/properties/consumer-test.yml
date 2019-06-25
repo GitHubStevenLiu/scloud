@@ -1,0 +1,33 @@
+t:
+  from: test
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://scloud:scloud123@127.0.0.1:9000/scloud-discovery/eureka
+  #      defaultZone: ${eureka.path}
+  instance:
+    #  当其它服务获取地址时提供ip而不是hostname
+    prefer-ip-address: true
+    # 默认 ipAddress + name + port
+    #instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}
+    status-page-url-path: ${server.servlet.context-path}/actuator/info
+    health-check-url-path: ${server.servlet.context-path}/actuator/health
+    metadata-map:
+      management:
+      context-path: /actuator
+      health-check-url: http://${eureka.instance.hostname}:${server.port}/actuator/health
+      status-page-url: http://${eureka.instance.hostname}:${server.port}/actuator/info
+      home-page-url: http://${eureka.instance.hostname}:${server.port}/
+    hostname: localhost
+
+producer:
+  service:
+    host:
+    verifyCode: e25f61b7-3849-4fe2-957c-ec96adb2d97a
+aggre:
+  service:
+    host:
+    verifyCode: e25f61b7-3849-4fe2-957c-ec96adb2d97a
