@@ -1,4 +1,4 @@
-package com.t.comsumer;
+package com.t.consumer;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

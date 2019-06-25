@@ -11,7 +11,7 @@
 
     <!-- <groupId>com.t</groupId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>comsumer</name>
+    <name>consumer</name>
     <description>Demo project for Spring Boot</description>
 -->
 
@@ -49,6 +49,21 @@
             <version>${project.parent.version}</version>
         </dependency>
 
+        <!--swagger2 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+        </dependency>
 
     </dependencies>
 

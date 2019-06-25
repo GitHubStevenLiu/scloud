@@ -1,6 +1,6 @@
-package com.t.comsumer.remote;
+package com.t.consumer.remote;
 
-import com.t.comsumer.remote.feign.ProducerFeignConfiguration;
+import com.t.consumer.remote.feign.ProducerFeignConfiguration;
 import com.test.aggre.dto.req.UserReqDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;

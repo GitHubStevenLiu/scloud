@@ -1,5 +1,5 @@
 
-package com.t.comsumer.remote.feign;
+package com.t.consumer.remote.feign;
 
 /**
  * @author code

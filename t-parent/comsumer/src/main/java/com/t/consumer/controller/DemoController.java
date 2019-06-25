@@ -1,8 +1,10 @@
-package com.t.comsumer.controller;
+package com.t.consumer.controller;
 
-import com.t.comsumer.remote.AggreRemote;
-import com.t.comsumer.remote.ProducerRemote;
+import com.t.consumer.remote.AggreRemote;
+import com.t.consumer.remote.ProducerRemote;
 import com.test.aggre.dto.req.UserReqDto;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RefreshScope //开启更新功能
+@Api(tags = {"消费者demo" })
 public class DemoController {
 
     @Autowired
@@ -31,6 +34,7 @@ public class DemoController {
     @Value("${t.from:local}")
     String from;
 
+    @ApiOperation(value = "v", notes = "notes")
     @GetMapping("/demo2")
     public String demo2(@RequestParam  String s) {
         System.out.println(producerRemote);

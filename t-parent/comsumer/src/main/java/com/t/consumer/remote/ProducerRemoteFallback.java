@@ -1,4 +1,4 @@
-package com.t.comsumer.remote;
+package com.t.consumer.remote;
 
 import org.springframework.stereotype.Component;
 

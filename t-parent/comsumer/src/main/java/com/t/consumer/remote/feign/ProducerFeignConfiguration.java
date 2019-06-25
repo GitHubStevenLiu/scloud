@@ -1,4 +1,4 @@
-package com.t.comsumer.remote.feign;
+package com.t.consumer.remote.feign;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
